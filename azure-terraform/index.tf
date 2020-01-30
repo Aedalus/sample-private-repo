@@ -17,7 +17,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_storage_account" "sg" {
-  name                     = "ds-tmp-storage-account"
+  name                     = "dstmpstorageaccount"
   resource_group_name      = azurerm_resource_group.rg.name
   location                 = azurerm_resource_group.rg.location
   account_tier             = "Standard"
@@ -30,7 +30,7 @@ resource "azurerm_storage_account" "sg" {
 
 
 resource "azurerm_storage_container" "container" {
-  name                  = "ds-tmp-container"
+  name                  = "dstmpcontainer"
   storage_account_name  = azurerm_storage_account.sg.name
   container_access_type = "private"
 }
