@@ -24,7 +24,7 @@ resource "azurerm_storage_account" "sg" {
   account_replication_type = "GRS"
 
   tags = {
-    environment = "staging"
+    environment = var.env
   }
 }
 
