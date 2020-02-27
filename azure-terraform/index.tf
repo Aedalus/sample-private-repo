@@ -4,7 +4,9 @@
 # - ARM_SUBSCRIPTION_ID
 # - ARM_CLIENT_ID
 # - ARM_CLIENT_SECRET
-provider azurerm {}
+provider azurerm {
+  version = "=1.40.0"
+}
 
 # Expects ARM_ACCESS_KEY
 terraform {
